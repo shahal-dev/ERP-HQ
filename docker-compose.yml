@@ -1,0 +1,13 @@
+version: "3"
+services:
+  my-nextjs-app:
+    image: ICCCADdev/ICCCAD:0.0.3-beta
+    container_name: ICCCAD-0.0.3-beta
+    env-file:
+      - .env
+      - .env.local
+    ports:
+      - "3000:3000"
+    volumes:
+      - .env:/app/.env
+      - .env.local:/app/.env.local
